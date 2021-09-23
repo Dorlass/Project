@@ -24,6 +24,7 @@ class skillsFactory extends Factory
         return [
             'name'=>$this->faker->jobTitle(),
             'level'=>$this->faker->numberBetween(0,5)
+            
         ];
     }
 }
