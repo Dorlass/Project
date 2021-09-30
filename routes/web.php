@@ -25,10 +25,10 @@ route::get('/', function (){
     return view('welcome');
 });
 
+Route::get('/skills',[skillcontroller::class,'lijst']);
+Route::get('/skills/{id}',[skillcontroller::class,'show']);
+Route::get('/activity',[ActivityController::class, 'lijst']);
+Route::get('/experience',[ExperienceController::class, 'lijst']);
+Route::get('/recommendation',[RecommendationController::class, 'lijst']);
 
-Route::get('/voorbeeldmodel',[voorbeeldcontroller::class, 'index']);
-Route::get('/voorbeeldmodel',[EducationController::class, 'index']);
-Route::get('/voorbeeldmodel',[ExperienceController::class, 'index']);
-Route::get('/voorbeeldmodel',[RecommendationController::class, 'index']);
-Route::get('/voorbeeldmodel',[ActivityController::class, 'index']);
-
+Route::get('/',[DogApiController::class,'getData']);

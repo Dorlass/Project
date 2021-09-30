@@ -17,4 +17,10 @@ class DatabaseSeeder extends Seeder
             skillseeder::class
         ]);
     }
+
+    {
+        $this->call([
+            ActivitySeeder::class
+        ]);
+    }
 }
