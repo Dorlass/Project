@@ -5,7 +5,7 @@ namespace Database\Factories;
 use App\Models\skills;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class skillsFactory extends Factory
+class SkillsFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
@@ -22,9 +22,7 @@ class skillsFactory extends Factory
     public function definition()
     {
         return [
-            'name'=>$this->faker->jobTitle(),
-            'level'=>$this->faker->numberBetween(0,5)
-            
+            //
         ];
     }
 }

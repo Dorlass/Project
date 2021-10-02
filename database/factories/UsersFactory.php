@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\education;
+use App\Models\users;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class EducationFactory extends Factory
+class UsersFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = education::class;
+    protected $model = users::class;
 
     /**
      * Define the model's default state.

@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Demo;
+use App\Models\skills;
 use Illuminate\Http\Request;
 
-class DemoController extends Controller
+class SkillsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class DemoController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Demo  $demo
+     * @param  \App\Models\skills  $skills
      * @return \Illuminate\Http\Response
      */
-    public function show(Demo $demo)
+    public function show(skills $skills)
     {
         //
     }
@@ -52,10 +52,10 @@ class DemoController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Demo  $demo
+     * @param  \App\Models\skills  $skills
      * @return \Illuminate\Http\Response
      */
-    public function edit(Demo $demo)
+    public function edit(skills $skills)
     {
         //
     }
@@ -64,10 +64,10 @@ class DemoController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Demo  $demo
+     * @param  \App\Models\skills  $skills
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Demo $demo)
+    public function update(Request $request, skills $skills)
     {
         //
     }
@@ -75,10 +75,10 @@ class DemoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Demo  $demo
+     * @param  \App\Models\skills  $skills
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Demo $demo)
+    public function destroy(skills $skills)
     {
         //
     }

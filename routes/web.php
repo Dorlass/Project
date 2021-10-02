@@ -1,13 +1,12 @@
 <?php
 
 use App\Http\Controllers\ActivityController;
-use App\Http\Controllers\EducationController;
 use App\Http\Controllers\ExperienceController;
 use App\Http\Controllers\RecommendationController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TestController;
-use App\Http\Controllers\skillcontroller;
-use App\Http\Controllers\voorbeeldcontroller;
+use App\Http\Controllers\SkillController;
+use App\Http\Controllers\UsersController;
+
 
 
 /*
@@ -25,10 +24,9 @@ route::get('/', function (){
     return view('welcome');
 });
 
-Route::get('/skills',[skillcontroller::class,'lijst']);
-Route::get('/skills/{id}',[skillcontroller::class,'show']);
+Route::get('/skills',[SkillController::class,'lijst']);
+Route::get('/skills/{id}',[SkillController::class,'show']);
 Route::get('/activity',[ActivityController::class, 'lijst']);
 Route::get('/experience',[ExperienceController::class, 'lijst']);
 Route::get('/recommendation',[RecommendationController::class, 'lijst']);
-
-Route::get('/',[DogApiController::class,'getData']);
+Route::get('/users', [UsersController::class, 'lijst']);
