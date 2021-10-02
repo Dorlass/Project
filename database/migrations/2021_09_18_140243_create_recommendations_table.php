@@ -16,6 +16,8 @@ class CreateRecommendationsTable extends Migration
         Schema::create('recommendations', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->FirstDegreeConnections();
+            $table->SecondDegreeConnections();
         });
     }
 
