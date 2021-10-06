@@ -3,6 +3,7 @@
 use App\Http\Controllers\api\SkillController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Middleware;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/skills',[SkillController::class, 'show']);
+Route::get('/profile', function() {})->middleware('auth');

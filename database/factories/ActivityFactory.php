@@ -22,7 +22,8 @@ class ActivityFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->name(),
+            'place' => $this->faker->city(),
         ];
     }
 }

@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\users;
+use App\Models\education;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class UsersFactory extends Factory
+class EducationFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = users::class;
+    protected $model = education::class;
 
     /**
      * Define the model's default state.
@@ -27,7 +27,7 @@ class UsersFactory extends Factory
             'age' => $this->faker->randomDigit(),
             'emailadress' => $this->faker->email(),
             'phone' => $this->faker->phoneNumber(),
-            'adress' => $this->faker->address()
+            'adress' => $this->faker->address(),
         ];
     }
 }

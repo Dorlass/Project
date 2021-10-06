@@ -22,7 +22,8 @@ class SkillsFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->name(),
+            'level' => $this->faker->randomDigitNotNull()
         ];
     }
 }
