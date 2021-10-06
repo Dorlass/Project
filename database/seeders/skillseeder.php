@@ -2,10 +2,10 @@
 
 namespace Database\Seeders;
 
-use App\Models\Experience;
+use App\Models\Skills;
 use Illuminate\Database\Seeder;
 
-class ExperienceSeeder extends Seeder
+class skillseeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,8 +14,8 @@ class ExperienceSeeder extends Seeder
      */
     public function run()
     {
-        Experience::Factory()
-        ->count(10)
-        ->create();
+            Skills::Factory()
+            ->count(10)
+            ->create();
     }
 }

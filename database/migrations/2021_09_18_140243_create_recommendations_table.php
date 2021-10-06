@@ -14,8 +14,9 @@ class CreateRecommendationsTable extends Migration
     public function up()
     {
         Schema::create('recommendations', function (Blueprint $table) {
-            $table->string ("FirstDegreeConnections");
-            $table->string ("SecondDegreeConnections");
+            $table->timestamps();
+            $table->id();
+            $table->string ('name');
         });
     }
 

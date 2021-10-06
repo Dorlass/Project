@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
             ExperienceSeeder::class,
             RecommendationSeeder::class,
             SkillsSeeder::class,
-            UsersSeeder::class
+            UsersSeeder::class,
         ]);
         
     }

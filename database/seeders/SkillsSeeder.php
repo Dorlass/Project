@@ -15,7 +15,7 @@ class SkillsSeeder extends Seeder
     public function run()
     {
             skills::Factory()
-            ->count(count:10)
+            ->count(10)
             ->create();
     }
 }

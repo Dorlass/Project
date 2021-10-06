@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\recommendation;
+use App\Models\Recommendation;
 use Illuminate\Database\Seeder;
 
 class RecommendationSeeder extends Seeder
@@ -14,8 +14,8 @@ class RecommendationSeeder extends Seeder
      */
     public function run()
     {
-        recommendation::Factory()
-        ->count(count:10)
+        Recommendation::Factory()
+        ->count(10)
         ->create();
     }
 }

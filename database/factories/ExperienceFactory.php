@@ -2,7 +2,7 @@
 
 namespace Database\Factories;
 
-use App\Models\experience;
+use App\Models\Experience;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class ExperienceFactory extends Factory
@@ -12,7 +12,7 @@ class ExperienceFactory extends Factory
      *
      * @var string
      */
-    protected $model = experience::class;
+    protected $model = Experience::class;
 
     /**
      * Define the model's default state.
@@ -22,7 +22,9 @@ class ExperienceFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'date' => $this->faker->date(),
+            'company' => $this->faker->name(),
+            'function' => $this->faker->jobTitle(),
         ];
     }
 }
