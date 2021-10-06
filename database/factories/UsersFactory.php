@@ -22,7 +22,12 @@ class UsersFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->name(),
+            'datofbirth' => $this->faker->date(),
+            'age' => $this->faker->randomDigit(),
+            'emailadress' => $this->faker->email(),
+            'phone' => $this->faker->phoneNumber(),
+            'adress' => $this->faker->address(),
         ];
     }
 }
