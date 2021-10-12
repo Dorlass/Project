@@ -6,6 +6,8 @@ use Illuminate\Http\Resources\Json\JsonResource;
 
 class SkillsResource extends JsonResource
 {
+public static $wrap = "skills";
+
     /**
      * Transform the resource into an array.
      *
@@ -14,6 +16,9 @@ class SkillsResource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        return [
+            'name' => $this->name,
+            'level' => $this->level
+        ];
     }
 }

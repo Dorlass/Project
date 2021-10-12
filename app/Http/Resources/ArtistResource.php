@@ -14,6 +14,10 @@ class ArtistResource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        return [
+            'name'=>$this->name,
+            'label'=>$this->label,
+            'skills'=> 'SkillCollection'($this->skills)
+        ];
     }
 }

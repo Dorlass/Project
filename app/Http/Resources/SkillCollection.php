@@ -14,6 +14,13 @@ class SkillCollection extends ResourceCollection
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        return [
+            'data' => $this->collection->take(2),
+            'meta' => [
+                'count' => $this->collection->count(),
+                'software' => 'laravel',
+                'version' => '1.0.0'
+            ]
+            ];
     }
 }

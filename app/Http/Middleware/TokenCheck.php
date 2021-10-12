@@ -16,6 +16,11 @@ class TokenCheck
      */
     public function handle(Request $request, Closure $next)
     {
+        $token = "SuperGeheimToken";
+        if($request->input('token')!=$token){
+            dd('Fout token!');
+        }
+
         return $next($request);
     }
 }

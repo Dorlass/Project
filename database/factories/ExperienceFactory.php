@@ -22,9 +22,9 @@ class ExperienceFactory extends Factory
     public function definition()
     {
         return [
-            'date' => $this->faker->date(),
-            'company' => $this->faker->name(),
-            'function' => $this->faker->jobTitle(),
+            "date" => $this->faker->date(),
+            "company" => $this->faker->name(),
+            "function" => $this->faker->jobTitle(),
         ];
     }
 }

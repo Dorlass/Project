@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\skillcontroller;
 use App\Http\Controllers\voorbeeldcontroller;
-
+use App\Http\Middleware\EnsureTokenIsValid;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,4 +31,9 @@ Route::get('/activity',[ActivityController::class, 'lijst']);
 Route::get('/experience',[ExperienceController::class, 'lijst']);
 Route::get('/recommendation',[RecommendationController::class, 'lijst']);
 
+Route::get('/profile', function (){
+
+})->middleware(EnsureTokenIsValid::class);
+
 Route::get('/',[DogApiController::class,'getData']);
+
