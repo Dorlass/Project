@@ -10,8 +10,8 @@ use App\Models\skills;
 
 class SkillController extends Controller
 {
-    public function show(){
-        $data = skills::first();
+    public function show($id){
+        $data = skills::first($id);
         return new SkillsResource($data);
     }
 
