@@ -37,3 +37,7 @@ Route::get('/profile', function (){
 
 Route::get('/',[DogApiController::class,'getData']);
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
