@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Services\DogApiService;
 use Illuminate\Support\ServiceProvider;
 
 class DogApiServiceProvider extends ServiceProvider
@@ -13,7 +14,9 @@ class DogApiServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton(abstract:dog)
+        $this->app->singleton(DogApiService::class, function(){
+            return new DogApiService();
+        });
     }
 
     /**
