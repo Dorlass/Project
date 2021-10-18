@@ -30,14 +30,10 @@ Route::get('/skills/{id}',[skillcontroller::class,'show']);
 Route::get('/activity',[ActivityController::class, 'lijst']);
 Route::get('/experience',[ExperienceController::class, 'lijst']);
 Route::get('/recommendation',[RecommendationController::class, 'lijst']);
+Route::get('/',[DogApiController::class,'getData']);
 
 Route::get('/profile', function (){
 
 })->middleware(EnsureTokenIsValid::class);
-
-Route::get('/',[DogApiController::class,'getData']);
-
-
-Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
